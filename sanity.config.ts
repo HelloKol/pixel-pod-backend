@@ -23,6 +23,8 @@ import settingsType from './schemas/settings'
 import externalLink from './objects/externalLink'
 import internalLink from './objects/internalLink'
 import emailLink from './objects/emailLink'
+import seoSettingsType from './objects/seoSettings'
+import seoPageType from './objects/seoPage'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Next.js Blog with Sanity.io'
 
@@ -36,6 +38,8 @@ export default defineConfig({
   schema: {
     // If you want more content types, you can add them to this array
     types: [
+      seoSettingsType,
+      seoPageType,
       postType,
       postIndexType,
       homeType,

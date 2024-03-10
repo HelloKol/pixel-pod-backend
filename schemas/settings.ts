@@ -51,6 +51,12 @@ export default defineType({
       of: [{type: 'internalLink'}, {type: 'externalLink'}, {type: 'emailLink'}],
       group: 'siteFooter',
     }),
+    defineField({
+      title: 'SEO Settings',
+      name: 'seoSettings',
+      type: 'seoSettings',
+      group: 'seo',
+    }),
   ],
   preview: {select: {title: 'title', subtitle: 'description'}},
 })

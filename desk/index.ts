@@ -27,7 +27,7 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     return false
   }
 
-  return !['home', 'postIndex', 'settings'].includes(id)
+  return !['home', 'postIndex', 'settings', 'seoSettings', 'seoPage'].includes(id)
 }
 
 export const structure: StructureResolver = (S, context) =>
