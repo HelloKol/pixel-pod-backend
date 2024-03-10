@@ -20,7 +20,13 @@ import postIndexType from './schemas/postIndex'
 import homeType from './schemas/home'
 import settingsType from './schemas/settings'
 
+import externalLink from './objects/externalLink'
+import internalLink from './objects/internalLink'
+import emailLink from './objects/emailLink'
+
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Next.js Blog with Sanity.io'
+
+const linkableContentTypes = ['home', 'post', 'postIndex', 'author']
 
 export default defineConfig({
   basePath: '/studio',
@@ -29,7 +35,16 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [postType, postIndexType, homeType, authorType, settingsType],
+    types: [
+      postType,
+      postIndexType,
+      homeType,
+      authorType,
+      settingsType,
+      externalLink,
+      emailLink,
+      internalLink({linkableContentTypes}),
+    ],
   },
   plugins: [
     deskTool({structure}),
