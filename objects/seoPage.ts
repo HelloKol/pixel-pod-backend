@@ -22,6 +22,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      title: 'SEO Tags',
+      name: 'tags',
+      type: 'string',
+    }),
+    defineField({
       title: 'SEO Image',
       name: 'image',
       type: 'image',

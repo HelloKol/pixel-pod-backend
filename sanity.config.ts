@@ -2,17 +2,12 @@
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
 
-import {debugSecrets} from '@sanity/preview-url-secret/sanity-plugin-debug-secrets'
 import {visionTool} from '@sanity/vision'
-import {apiVersion, dataset, DRAFT_MODE_ROUTE, projectId} from './lib/sanity.api'
-import {locate} from './plugins/locate'
-import {previewDocumentNode} from './plugins/previewPane'
-import {settingsPlugin, settingsStructure} from './plugins/settings'
+import {apiVersion, dataset, projectId} from './lib/sanity.api'
+import {settingsPlugin} from './plugins/settings'
 import {defineConfig} from 'sanity'
-import {presentationTool} from 'sanity/presentation'
 import {deskTool} from 'sanity/desk'
 import {structure} from './desk'
-import {structureTool} from 'sanity/structure'
 import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
 import authorType from './schemas/author'
 import postType from './schemas/post'
@@ -26,7 +21,7 @@ import emailLink from './objects/emailLink'
 import seoSettingsType from './objects/seoSettings'
 import seoPageType from './objects/seoPage'
 
-const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Next.js Blog with Sanity.io'
+const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Pixel Pod'
 
 const linkableContentTypes = ['home', 'post', 'postIndex', 'author']
 
